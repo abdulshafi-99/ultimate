@@ -507,13 +507,12 @@ a {
     bottom: 0px;
     right: 0px;
     border-style: solid;
-    border-width: 0px 0px 160px 600px;
+    border-width: 0px 0px 170px 500px;
     border-color: transparent transparent white transparent;
     transition: var(--main-transition);
 }
 .features .box:hover .image::after {
-    border-width: 0px 600px 160px 0px;
-    border-color: transparent transparent white transparent;
+    border-width: 170px 500px 170px 0px;
 }
 .features .box .image img {
     max-width: 100%;
@@ -524,9 +523,9 @@ a {
 }
 .features .box .text h3 {
     width: fit-content;
-    margin: 0 auto 20px;
+    margin: auto;
     padding: 0 0 20px;
-    font-size: 28px;
+    font-size: 40px;
     position: relative;
 }
 .features .box .text h3::after {
@@ -539,20 +538,21 @@ a {
 }
 .features .box .text p {
     color: var(--text-color);
-    line-height: 1.5;
+    line-height: 2;
     font-size: 20px;
+    margin: 30px 0;
+    padding: 25px;
 }
 .features .box .text a {
     display: block;
     width: fit-content;
-    margin: 15px auto;
-    padding: 10px 25px;
+    margin: 0px auto 30px;
+    padding: 10px 30px;
     border: 3px solid;
     border-radius: 6px;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
     transition: var(--main-transition);
-
     position: relative;
 }
 .features .box:hover .text a {
@@ -571,7 +571,7 @@ a {
 .features .box:hover .text a::before {
     width: 100%;
 }
-
+        /* quality section */
 .features .quality .image::before {
     background-color: rgba(244 63 54 / 60%);
 }
@@ -585,7 +585,7 @@ a {
 .features .quality .text a::before {
     background-color: #f44036;
 }
-
+        /* time section */
 .features .time .image::before {
     background-color: rgba(0 150 135 / 60%);
 }
@@ -599,8 +599,7 @@ a {
 .features .time .text a::before {
     background-color: #009688;
 }
-
-
+        /* passion section */
 .features .passion .image::before {
     background-color: rgba(3 168 244 / 60%);
 }
@@ -615,3 +614,51 @@ a {
     background-color: #03a9f4;
 }
 /* end features section */
+
+/* start testimonials section */
+.testimonials {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-color: var(--section-background);
+}
+.testimonials .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+.testimonials .box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 6px;
+    position: relative;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 7%);
+}
+.testimonials .box img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 10px solid var(--section-background);
+    position: absolute;
+    top: -50px;
+    right: -10px;
+}
+.testimonials .box h3 {
+    margin-bottom: 10px;
+}
+.testimonials .box span {
+    display: block;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+.testimonials .box .rating {
+    margin-bottom: 10px;
+}
+.testimonials .box .rating i:not(:last-of-type) {
+    color: gold;
+}
+.testimonials .box p {
+    color: var(--text-color);
+    margin-top: 10px;
+    line-height: 1.5;
+}
+/* end testimonials section */
