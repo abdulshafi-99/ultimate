@@ -946,3 +946,112 @@ a {
     }
 }
 /* end work-steps section */
+
+/* start events section */
+.events {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+.events .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.events img {
+    max-width: 450px;
+}
+.events .container .box {
+    flex: 1;
+}
+.events .box .timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    gap: 10px;
+}
+.events .box .timer div {
+    width: 75px;
+    border: 1px solid #d4d4d4;
+    border-radius: 6px;
+    text-align: center;
+    transition: var(--main-transition);
+}
+.events .box .timer div span {
+    display: block;
+}
+.events .box .timer div span:first-of-type {
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 35px;
+    padding: 15px;
+}
+.events .box .timer div span:last-of-type {
+    padding: 8px 10px;
+    font-size: 13px;
+    border-top: 1px solid #d4d4d4;
+    transition: var(--main-transition);
+}
+.events .box .timer div:hover,
+.events .box .timer div:hover span:last-of-type {
+    border-color: var(--main-color);
+}
+.events .box h3 {
+    text-align: center;
+    font-size: 30px;
+    margin: 40px 0 0;
+}
+.events .box p {
+    text-align: center;
+    line-height: 1.7;
+    color: var(--text-color);
+    font-size: 19px;
+    margin-top: 20px;
+}
+.events .subscribe {
+    width: 100%;
+    margin-top: 50px;
+}
+.events .subscribe form {
+    width: 600px;
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 30px 40px;
+    background-color: #f6f5f5;
+    border-radius: 50px;
+    display: flex;
+    gap: 20px;
+}
+.events .subscribe form input[type="email"] {
+    flex: 1;
+    padding: 20px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+}
+.events .subscribe form input[type="submit"] {
+    padding: 20px;
+    color: white;
+    background-color: var(--main-color);
+    border-radius: 50px;
+    outline: none;
+    border: none;
+}
+
+@media (max-width: 991px) {
+    .events .container img {
+        display: none;
+    }
+}
+@media (max-width: 508px) {
+    .events .subscribe form {
+        flex-direction: column;
+        border-radius: 0;
+    }
+    .events .subscribe form [type="email"],
+    .events .subscribe form input[type="submit"] {
+        border-radius: 0;
+    }
+
+}
+/* end events section */
