@@ -826,3 +826,57 @@ a {
     color: var(--main-color);
 }
 /* end services section */
+
+/* start skills section */
+.skills {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+.skills .container {
+    display: flex;
+    align-items: center;
+} 
+.skills .container img {
+    max-width: 100%;
+}
+.skills .languages {
+    max-width: 100%;
+    width: 600px;
+}
+.skills .language {
+    margin-bottom: 20px;
+}
+.skills .language h3 {
+    margin-bottom: 20px;
+}
+.skills .language .box {
+    width: 100%;
+    height: 30px;
+    background-color: #e6e6e7;
+    position: relative;
+}
+.skills .language .box::after {
+    content: attr(data-progress);
+    color: var(--main-color);
+    position: absolute;
+    top: -40px;
+    right: 0;
+    background-color: white;
+    padding: 3px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+}
+.skills .language .box span {
+    display: block;
+    height: 100%;
+    background-color: var(--main-color);
+}
+
+@media (max-width: 991px) {
+    .skills .container {
+        flex-direction: column;
+    }
+}
+/* end skills section */
