@@ -1260,3 +1260,86 @@ a {
     }
 }
 /* end vedios section */
+
+/* start stats section */
+.stats {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-image: url(../images/stats.jpg);
+    background-size: cover;
+    position: relative;
+}
+.stats::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255 255 255 / 95%);
+}
+.stats h2 {
+    text-align: center;
+    font-size: 40px;
+    width: fit-content;
+    margin: 0 auto 50px;
+    position: relative;
+}
+.stats .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    position: relative;
+}
+.stats .box {
+    background-color: white;
+    padding: 30px 15px;
+    opacity: .8;
+    position: relative;
+    transition: var(--main-transition);
+}
+.stats .box::before,
+.stats .box::after {
+    content: "";
+    width: 2px;
+    height: 0;
+    background-color: var(--main-color);
+    position: absolute;
+    transition: .7s;
+}
+.stats .box::before {
+    left: 0;
+    bottom: 0;
+}
+.stats .box::after {
+    right: 0;
+    top: 0;
+}
+.stats .box:hover {
+    opacity: 1;
+}
+.stats .box:hover::before,
+.stats .box:hover::after {
+    height: 100%;
+}
+.stats .box i {
+    display: block;
+    margin: 0 auto 20px;
+}
+.stats .box .number {
+    display: block;
+    width: fit-content;
+    margin: 10px auto;
+    font-weight: bold;
+    font-size: 40px;
+}
+.stats .box .text {
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 25px;
+    font-style: italic;
+    display: block;
+    margin: 10px auto;
+    width: fit-content;
+}
+/* end stats section */
