@@ -100,6 +100,7 @@ a {
     font-size: 35px;
     text-transform: uppercase;
     position: relative;
+    z-index: 0;
     transition-delay: .5s;
 }
 .heading-component:hover {
@@ -1055,3 +1056,138 @@ a {
 
 }
 /* end events section */
+
+/* start pricing section */
+.pricing {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-color: var(--section-background);
+}
+.pricing .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+.pricing .box {
+    background-color: white;
+    box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+    position: relative;
+    z-index: 0;
+}
+.pricing .box::before,
+.pricing .box::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    height: 50%;
+    background-color: #f6f5f5;
+    transition: var(--main-transition);
+}
+.pricing .box::before {
+    top: 0;
+    left: 0;
+}
+.pricing .box::after {
+    top: 50%;
+    right: 0;
+}
+.pricing .box:hover::before,
+.pricing .box:hover::after {
+    width: 100%;
+}
+.pricing .box h3 {
+    font-size: 25px;
+    margin: 30px auto;
+    width: fit-content;
+}
+.pricing .box img {
+    display: block;
+    width: 70px;
+    margin: auto;
+}
+.pricing .box .price {
+    display: block;
+    width: fit-content;
+    margin: 30px auto 5px;
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 50px;
+}
+.pricing .box .month {
+    display: block;
+    width: fit-content;
+    color: var(--text-color);
+    margin: 0 auto 20px;
+}
+.pricing .box ul  li {
+    padding: 20px;
+    border-top: 1px solid #d4d4d4;
+}
+.pricing .box ul  li::before {
+    font-family: "Font Awesome 6 Free";
+    content: "\f00c";
+    margin-right: 10px;
+    font-weight: 900;
+    color: var(--main-color);
+}
+.pricing .box a {
+    display: block;
+    width: fit-content;
+    padding: 15px 20px;
+    margin: 30px auto 40px;
+    border: 2px solid var(--main-color);
+    border-radius: 6px;
+    color: var(--main-color);
+    font-weight: bold;
+    transition: var(--main-transition);
+    position: relative;
+    z-index: 0;
+}
+.pricing .box a::before {
+    content: "";
+    height: 100%;
+    width: 0;
+    background-color: var(--main-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: var(--main-transition);
+}
+.pricing .box a:hover {
+    color: white;
+}
+.pricing .box a:hover::before {
+    width: 100%;
+} 
+
+.pricing .popular {
+    position: relative;
+}
+.pricing .popular .label {
+    width: 40px;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    z-index: 2;
+    padding: 10px;
+    background-color: var(--main-color);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    writing-mode: vertical-rl;
+}
+.pricing .popular .label::after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-style: solid;
+    border-width:  20px;
+    border-color: var(--main-color) var(--main-color) transparent var(--main-color);
+}
+/* end pricing section */
