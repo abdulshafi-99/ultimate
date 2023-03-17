@@ -1191,3 +1191,72 @@ a {
     border-color: var(--main-color) var(--main-color) transparent var(--main-color);
 }
 /* end pricing section */
+
+/* start vedios section */
+.vedios {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+.vedios .container {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--section-background);
+    padding: 0;
+    border: 1px solid #ddd;
+}
+.vedios .vedios-list {
+    background-color: white;
+    min-width: 300px;
+}
+.vedios .heading {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+.vedios .vedios-list li {
+    padding: 20px;
+    border-top: 1px solid var(--section-background);
+    cursor: pointer;    
+    transition: var(--main-transition);
+}
+.vedios .vedios-list li:hover {
+    background-color: #fafafa;
+    color: var(--main-color);
+}
+.vedios .vedios-list li span {
+    display: block;
+}
+.vedios .vedios-list li .duration {
+    display: block;
+    margin-top: 10px;
+    color: #777;
+    transition: var(--main-transition);
+}
+.vedios .vedios-list li:hover .duration {
+    color: var(--main-color);
+}
+.vedios figure {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.vedios figure img {
+    max-width: 100%;
+}
+.vedios figure figcaption {
+    width: 100%;
+    padding: 20px;
+    margin: 10px auto;
+    background-color: white;
+    border-radius: 3px;
+}
+
+@media (max-width: 991px) {
+    .vedios .container {
+        flex-direction: column;
+    }
+}
+/* end vedios section */
